@@ -20,7 +20,7 @@ while end_program != "Y":
     elif noun_to_plural[-2:] == 'is':
         new_string = noun_to_plural[0:-2] + 'es'
         noun_to_plural = new_string
-
+#This elif will slice the string, check the last 2 strings on the string and the change it to plural
     elif noun_to_plural[-2:] == 'fe':
         new_string = noun_to_plural[0:-2] + 'ves'
         noun_to_plural = new_string
@@ -28,26 +28,19 @@ while end_program != "Y":
     elif noun_to_plural[-1] == 's' or noun_to_plural[-1] == 'z' or noun_to_plural[-1] == 'o'\
             or noun_to_plural[-1] == 'f':
         noun_to_plural += 'es'
-    #
-    # elif noun_to_plural[-1] == 'z':
-    #     noun_to_plural += 'es'
-    #
-    # elif noun_to_plural[-1] == 'o':
-    #     noun_to_plural += 'es'
-    #
-    # elif noun_to_plural[-1] == 'f':
-    #     noun_to_plural += 'es'
 
     elif noun_to_plural[-2:] == 'oy':
         noun_to_plural += 's'
 
     elif noun_to_plural[-2:] == 'ch':
         noun_to_plural += 'es'
-
+#elif statement to handle those nouns that have to characters that end on 'on' and then I replaced those characters with an 'a'
     elif noun_to_plural[-2:] == 'on':
         new_string = noun_to_plural[0:-2] + 'a'
         noun_to_plural = new_string
 
+#elif statement that checks for irregular plurals using their two last characters (voqwl + y ) of the string.
+    #then I added a 's' into the string.
     elif noun_to_plural[-2:] == 'ay' or noun_to_plural[-2:] == 'ey' or noun_to_plural[-2:] == 'iy' or \
             noun_to_plural[-2:] == 'oy' or noun_to_plural[-2:] == 'uy':
         noun_to_plural += 's'
@@ -56,7 +49,7 @@ while end_program != "Y":
             noun_to_plural[-2:] != 'oy' or noun_to_plural[-2:] != 'uy':
         new_string = noun_to_plural[0:-1] + 'ies'
         noun_to_plural = new_string
-
+#elif statement to handle those nouns their two characters end with 'um', the program then adds a s at the end
     elif noun_to_plural[-2:] == 'um':
         noun_to_plural += 's'
 #If the noun doesn't meet all the other requirmements then the convertor will
